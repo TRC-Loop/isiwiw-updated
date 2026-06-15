@@ -1,3 +1,7 @@
+# ISIWIW-Updated
+
+> This is a continuation of the original [isiwiw](https://github.com/TheCSDev/isiwiw) project by TheCSDev, which has been archived.
+
 # ISIWIW
 'I shall install whatever I want' is a Minecraft mod that aims to allow clients to bypass some installation requirements made by servers, such as installing certain mods and resource packs. This mod is optional on both sides, meaning, you do not have to have it installed on the server in order to use it on the client, and vice-versa.
 

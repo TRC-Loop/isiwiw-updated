@@ -1,0 +1,41 @@
+/*
+ * Defines the repositories where the project dependencies are obtained from.
+ */
+repositories
+{
+	maven { url "https://cursemaven.com/" }
+	maven { url "https://maven.shedaniel.me/" }
+	maven { url "https://maven.terraformersmc.com/releases/" }
+}
+
+/*
+ * Defines the source-sets used by this project.
+ */
+sourceSets
+{
+	main
+	{
+		java { srcDirs = ['src/main/java'] }
+		resources { srcDirs = ['src/main/resources'] }
+	}
+}
+
+/*
+ * Implements the dependencies this project uses.
+ */
+dependencies
+{
+	// To change the versions see the gradle.properties file
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	// Fabric API
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	// Mod Menu
+	api "com.terraformersmc:modmenu:${project.modmenu_version}"
+
+	// All .jar files in 'src/main/resources/META-INF/jarjar'
+	implementation fileTree(dir: 'src/main/resources/META-INF/jarjar', include: '*.jar')
+	implementation fileTree(dir: 'src/main/resources/META-INF/jarjar-excluded', include: '*.jar')
+}
