@@ -8,8 +8,7 @@
 - Group ID changed from `io.github.thecsdev` to `io.github.trcloop`
 - Removed tcdcommons dependency (config had no properties)
 - Rewrote all mixins for updated Fabric API internals and Mojang class names
-- Added client brand spoofing: the client now reports "vanilla" instead of "fabric" to servers
-- Suppresses all Fabric-specific outbound packets (channel registration, version handshake) so the server sees a vanilla client
+- **Rebrands the entire client to vanilla** — the client brand, networking handshake, and all Fabric-specific outbound packets are spoofed or suppressed so the server sees a completely unmodded vanilla client
 - Rewrote registry sync client mixin to match new `ClientRegistrySyncHandler` / `RegistrySyncPayload` API
 
 > [!WARNING]
