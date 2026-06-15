@@ -9,7 +9,14 @@
 - Removed tcdcommons dependency (config had no properties)
 - Rewrote all mixins for updated Fabric API internals and Mojang class names
 - Added client brand spoofing: the client now reports "vanilla" instead of "fabric" to servers
+- Suppresses all Fabric-specific outbound packets (channel registration, version handshake) so the server sees a vanilla client
 - Rewrote registry sync client mixin to match new `ClientRegistrySyncHandler` / `RegistrySyncPayload` API
+
+> [!WARNING]
+> **Compatibility notice for v1.3**
+> This mod blocks all Fabric networking channel announcements to the server. This means **other mods that rely on server-side Fabric networking (custom packets, server-client communication) will not work** while this mod is installed.
+> Mods that are purely client-side (rendering, HUD, etc.) will work fine.
+> If you need a specific mod's server communication to work, you may need to remove isiwiw-updated.
 
 # ISIWIW
 'I shall install whatever I want' is a Minecraft mod that aims to allow clients to bypass some installation requirements made by servers, such as installing certain mods and resource packs. This mod is optional on both sides, meaning, you do not have to have it installed on the server in order to use it on the client, and vice-versa.

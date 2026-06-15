@@ -6,6 +6,7 @@
 	"mixins":
 	[
 		"MixinClientBrandRetriever",
+		"MixinConnection",
 		"MixinFabricRegistryClientInit"
 	],
 	"injectors": { "defaultRequire": 1 }
