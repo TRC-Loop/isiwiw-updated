@@ -11,6 +11,10 @@
 - **Rebrands the entire client to vanilla** — the client brand, networking handshake, and all Fabric-specific outbound packets are spoofed or suppressed so the server sees a completely unmodded vanilla client
 - Rewrote registry sync client mixin to match new `ClientRegistrySyncHandler` / `RegistrySyncPayload` API
 
+> [!CAUTION]
+> **Disclaimer**
+> This mod is provided as-is for educational and personal use. The authors are **not responsible** for any bans, kicks, or other consequences resulting from the use of this mod on any server. Use at your own risk. By installing this mod, you accept full responsibility for any actions taken against your account. Some servers explicitly prohibit the use of mods that spoof or hide client information — make sure you understand and accept the risks before using this mod.
+
 > [!WARNING]
 > **Compatibility notice for v1.3**
 > This mod blocks all Fabric networking channel announcements to the server. This means **other mods that rely on server-side Fabric networking (custom packets, server-client communication) will not work** while this mod is installed.
