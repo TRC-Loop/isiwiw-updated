@@ -2,6 +2,15 @@
 
 > This is a continuation of the original [isiwiw](https://github.com/TheCSDev/isiwiw) project by TheCSDev, which has been archived.
 
+### Changes in isiwiw-updated (v1.3+fabric-26.1.2)
+- Ported to Minecraft 26.1.2 (unobfuscated) with official Mojang mappings
+- Java 25, Gradle 9.5.1, Fabric Loom 1.16, Loader 0.19.3, Fabric API 0.151.0+26.1.2
+- Group ID changed from `io.github.thecsdev` to `io.github.trcloop`
+- Removed tcdcommons dependency (config had no properties)
+- Rewrote all mixins for updated Fabric API internals and Mojang class names
+- Added client brand spoofing: the client now reports "vanilla" instead of "fabric" to servers
+- Rewrote registry sync client mixin to match new `ClientRegistrySyncHandler` / `RegistrySyncPayload` API
+
 # ISIWIW
 'I shall install whatever I want' is a Minecraft mod that aims to allow clients to bypass some installation requirements made by servers, such as installing certain mods and resource packs. This mod is optional on both sides, meaning, you do not have to have it installed on the server in order to use it on the client, and vice-versa.
 

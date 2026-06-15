@@ -5,6 +5,7 @@
 	"compatibilityLevel": "JAVA_21",
 	"mixins":
 	[
+		"MixinClientBrandRetriever",
 		"MixinFabricRegistryClientInit"
 	],
 	"injectors": { "defaultRequire": 1 }
